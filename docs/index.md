@@ -1,7 +1,6 @@
-# Welcome to MkDocs
+# Welcome to LTA DevOps Immersion Programme
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-Workflow
+This is the documentation.
 
 ## Commands
 
