@@ -2,6 +2,10 @@
 
 This is the documentation.
 
+## Step 1: CodeSandbox
+
+We will be creating this project on CodeSandbox.
+
 ## Commands
 
 - `mkdocs new [dir-name]` - Create a new project.
