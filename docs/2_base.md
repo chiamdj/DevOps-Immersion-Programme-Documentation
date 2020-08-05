@@ -29,6 +29,7 @@ Make a mental note of the components and their hierarchies that we will have to 
 
 ## App Behaviour
 
+![react](https://reactjs.org/logo-og.png)
 The reason why we are using React to create our web app (instead of traditional HTML/CSS/JS) is because React provides an easy framework for us to create interactive applications that are responsive to user input (e.g. mouse click, key press, hover etc.). React is also very common in [single page applications](https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58).
 
 In our shopping list, users will be able to:
