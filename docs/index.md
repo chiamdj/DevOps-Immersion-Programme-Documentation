@@ -4,7 +4,11 @@ The first step to any React project is to install React and install any project 
 
 ## 1.1 CodeSandbox
 
-We will be creating this project on CodeSandbox. Head on to [https://codesandbox.io](https://codesandbox.io) and create a new React sandbox.
+We will be creating this project on CodeSandbox. Click on the **Edit on CodeSandbox** button below to create a new repository with the boilerplate code below:
+
+[![Edit LTA DevOps Immersion Programme - React Web App Demo (Starting Code)](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/stoic-darwin-11gnr?fontsize=14&hidenavigation=1&theme=dark)
+
+<iframe src="https://codesandbox.io/embed/stoic-darwin-11gnr?fontsize=14&hidenavigation=1&theme=dark" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="LTA DevOps Immersion Programme - React Web App Demo (Starting Code)" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
 
 !!! error "Save your work"
     In order to avoid losing your work, it is recommended that you create a [CodeSandbox account](https://codesandbox.io/signin) before moving on. You need a [GitHub account](https://github.com/join) to sign up.
