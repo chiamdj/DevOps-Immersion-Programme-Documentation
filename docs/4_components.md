@@ -96,7 +96,8 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 We also want to allow users to remove the items in the list.
 
-Import the `DeleteForeverIcon` icon and add it below the `ListItemText`:
+Import `IconButton` from `@material-ui/core` and `DeleteForeverIcon` from `@material-ui/icons` and add them below the `ListItemText` component:
+
 ```JSX
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 // Code omitted for brevity
@@ -107,7 +108,9 @@ import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 				<ShoppingCartIcon />
 			</ListItemIcon>
 			<ListItemText>{item}</ListItemText>
-			<DeleteForeverIcon style={{ color: "red" }} />
+			<IconButton aria-label="delete">
+                <DeleteForeverIcon style={{ color: "red" }} />
+			</IconButton>
 		</ListItem>
 	))}
 </List>
@@ -128,4 +131,4 @@ Finally, expand the `CardActions` component and import the `Button` component. A
 
 Finally, go to `App.css` and remove the `height` property from `.Card`.
 
-You are done for this section. Note however that the list is not interactive, i.e. clicking on the buttons and the list does not do anything. React will allow us to "interactive" 
+You are done for this section. Note however that the list is not interactive, i.e. clicking on the buttons and the list does not do anything. React will allow us to make these components interactive easily, which we will explore in the next section.

@@ -3,13 +3,18 @@ theme:
   name: material
   features:
     - instant
+  palette:
+    primary: green
 markdown_extensions:
   - admonition
   - pymdownx.tabbed
   - pymdownx.superfences
 nav:
-  - Home:
+  - Creating a Web App with React:
       - index.md
       - 2_base.md
       - 3_card.md
       - 4_components.md
+      - 5_actions.md
+  - Introduction to DevOps:
+      - 6_devOps.md
