@@ -3,8 +3,8 @@ theme:
   name: material
   features:
     - instant
-  palette:
-    primary: green
+  # palette:
+  #   primary: green
 markdown_extensions:
   - admonition
   - pymdownx.tabbed
