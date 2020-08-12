@@ -1,0 +1,598 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.5">
+    
+    
+      
+        <title>4. Adding more Components - LTA 2nd DevOps Immersion Programme - React Web App Demo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.63b94e9e.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7f672a1f.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-adding-more-components" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="LTA 2nd DevOps Immersion Programme - React Web App Demo" class="md-header-nav__button md-logo" aria-label="LTA 2nd DevOps Immersion Programme - React Web App Demo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            LTA 2nd DevOps Immersion Programme - React Web App Demo
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              4. Adding more Components
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LTA 2nd DevOps Immersion Programme - React Web App Demo" class="md-nav__button md-logo" aria-label="LTA 2nd DevOps Immersion Programme - React Web App Demo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    LTA 2nd DevOps Immersion Programme - React Web App Demo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Creating a Web App with React
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Creating a Web App with React" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Creating a Web App with React
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="1. Setting up the environment" class="md-nav__link">
+      1. Setting up the environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2_base/" title="2. The Final Product" class="md-nav__link">
+      2. The Final Product
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3_card/" title="3. Our First Component" class="md-nav__link">
+      3. Our First Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        4. Adding more Components
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="4. Adding more Components" class="md-nav__link md-nav__link--active">
+      4. Adding more Components
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-adding-a-title" class="md-nav__link">
+    4.1 Adding a Title
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-adding-a-list" class="md-nav__link">
+    4.2 Adding a List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-adding-a-button" class="md-nav__link">
+    4.3 Adding a Button
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5_actions/" title="5. Introducing React Hooks" class="md-nav__link">
+      5. Introducing React Hooks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction to DevOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Introduction to DevOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Introduction to DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6_devOps/" title="Introduction to DevOps" class="md-nav__link">
+      Introduction to DevOps
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-adding-a-title" class="md-nav__link">
+    4.1 Adding a Title
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-adding-a-list" class="md-nav__link">
+    4.2 Adding a List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-adding-a-button" class="md-nav__link">
+    4.3 Adding a Button
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="4-adding-more-components">4. Adding more Components</h1>
+<p>Now we are ready to add more components to our <code>Card</code>.</p>
+<p>We will be adding the following components:</p>
+<ul>
+<li><a href="https://material-ui.com/components/typography/">Typography</a></li>
+<li><a href="https://material-ui.com/components/dividers/">Divider</a></li>
+<li><a href="https://material-ui.com/components/lists/">List</a></li>
+<li><a href="https://material-ui.com/components/buttons/">Button</a></li>
+</ul>
+<p>Click on the respective components to read more about them.</p>
+<h2 id="41-adding-a-title">4.1 Adding a Title</h2>
+<p>Import the <code>Typography</code> component from <code>@material-ui/core</code> and add the <code>Typography</code> component between the <code>&lt;CardContent&gt; tags</code>:</p>
+<div class="highlight"><pre><span></span><code>&lt;CardContent&gt;
+    &lt;Typography variant=&quot;h4&quot;&gt;Shopping List&lt;/Typography&gt;
+&lt;/CardContent&gt;
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>&lt;CardContent /&gt;</code> is the same as <code>&lt;CardContent&gt;&lt;CardContent/&gt;</code>. The former shortens code and improves readability when a React component has no props.</p>
+</div>
+<p>Next import and add a <code>Divider</code> component below it:</p>
+<div class="highlight"><pre><span></span><code>&lt;Divider /&gt;
+</code></pre></div>
+
+<p>You should see a title with a horizontal rule on the <code>Card</code>.</p>
+<h2 id="42-adding-a-list">4.2 Adding a List</h2>
+<p>Before we create a list, we should first define an array of items that will be displayed in the list. </p>
+<p>Add the following line of code before the function <code>App</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">listItems</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Before adding the <code>List</code> component it is good to reference the Material-UI documentation to see the structure of the component. Go to <a href="https://material-ui.com/components/lists/">https://material-ui.com/components/lists/</a> and check out the code for the <strong>Simple List</strong>.</p>
+<p>Note the hierarchy of components within the the <code>List</code> component:
+<div class="highlight"><pre><span></span><code>&lt;List component=&quot;nav&quot; aria-label=&quot;main mailbox folders&quot;&gt;
+    &lt;ListItem button&gt;
+        &lt;ListItemIcon&gt;
+            &lt;InboxIcon /&gt;
+        &lt;/ListItemIcon&gt;
+        &lt;ListItemText primary=&quot;Inbox&quot; /&gt;
+    &lt;/ListItem&gt;
+    &lt;ListItem button&gt;
+        &lt;ListItemIcon&gt;
+            &lt;DraftsIcon /&gt;
+        &lt;/ListItemIcon&gt;
+        &lt;ListItemText primary=&quot;Drafts&quot; /&gt;
+    &lt;/ListItem&gt;
+&lt;/List&gt;
+</code></pre></div></p>
+<p>Next, import the <code>List</code> component and add it below the <code>Divider</code> component. Within that component, we want to iterate over each item in <code>listItems</code> to display it in the list as a text. We do this by using the JavaScript <code>map</code> function.</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>See <a href="https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d">https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d</a> for a good explanation on the <code>map</code> function</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">List</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="nx">listItems</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="p">=&gt;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">ListItem</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">ListItemText</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">item</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/ListItemText&gt;</span>
+        <span class="o">&lt;</span><span class="err">/ListItem&gt;</span>
+    <span class="p">))}</span>
+<span class="o">&lt;</span><span class="err">/List&gt;</span>
+</code></pre></div>
+
+<p>Let's also add an icon for each element in the list. Import <code>&lt;ShoppingCartIcon /&gt;</code> from <code>@material-ui/icons</code> and add it below the <code>ListItemText</code> component.</p>
+<div class="highlight"><pre><span></span><code>import ShoppingCartIcon from &quot;@material-ui/icons/ShoppingCart&quot;;
+// Code omitted for brevity
+&lt;List&gt;
+    {listItems.map(item =&gt; (
+        &lt;ListItem&gt;
+            &lt;ListItemIcon&gt;
+                &lt;ShoppingCartIcon /&gt;
+            &lt;/ListItemIcon&gt;
+            &lt;ListItemText&gt;{item}&lt;/ListItemText&gt;
+        &lt;/ListItem&gt;
+    ))}
+&lt;/List&gt;
+</code></pre></div>
+
+<p>We also want to allow users to remove the items in the list.</p>
+<p>Import <code>IconButton</code> from <code>@material-ui/core</code> and <code>DeleteForeverIcon</code> from <code>@material-ui/icons</code> and add them below the <code>ListItemText</code> component:</p>
+<div class="highlight"><pre><span></span><code>import DeleteForeverIcon from &quot;@material-ui/icons/DeleteForever&quot;;
+// Code omitted for brevity
+&lt;List&gt;
+    {listItems.map(item =&gt; (
+        &lt;ListItem&gt;
+            &lt;ListItemIcon&gt;
+                &lt;ShoppingCartIcon /&gt;
+            &lt;/ListItemIcon&gt;
+            &lt;ListItemText&gt;{item}&lt;/ListItemText&gt;
+            &lt;IconButton aria-label=&quot;delete&quot;&gt;
+                &lt;DeleteForeverIcon style={{ color: &quot;red&quot; }} /&gt;
+            &lt;/IconButton&gt;
+        &lt;/ListItem&gt;
+    ))}
+&lt;/List&gt;
+</code></pre></div>
+
+<h2 id="43-adding-a-button">4.3 Adding a Button</h2>
+<p>Finally, expand the <code>CardActions</code> component and import the <code>Button</code> component. Add the following line of code to render the button:</p>
+<div class="highlight"><pre><span></span><code>&lt;CardActions&gt;
+    &lt;Button size=&quot;small&quot;&gt;
+        Add Item
+    &lt;/Button&gt;
+&lt;/CardActions&gt;
+</code></pre></div>
+
+<p>Finally, go to <code>App.css</code> and remove the <code>height</code> property from <code>.Card</code>.</p>
+<p>You are done for this section. Note however that the list is not interactive, i.e. clicking on the buttons and the list does not do anything. React will allow us to make these components interactive easily, which we will explore in the next section.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../3_card/" title="3. Our First Component" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                3. Our First Component
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../5_actions/" title="5. Introducing React Hooks" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                5. Introducing React Hooks
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

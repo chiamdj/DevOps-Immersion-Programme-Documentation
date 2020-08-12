@@ -1,0 +1,519 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.5">
+    
+    
+      
+        <title>1. Setting up the environment - LTA 2nd DevOps Immersion Programme - React Web App Demo</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.63b94e9e.min.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/palette.7f672a1f.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-setting-up-the-environment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="." title="LTA 2nd DevOps Immersion Programme - React Web App Demo" class="md-header-nav__button md-logo" aria-label="LTA 2nd DevOps Immersion Programme - React Web App Demo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            LTA 2nd DevOps Immersion Programme - React Web App Demo
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              1. Setting up the environment
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="LTA 2nd DevOps Immersion Programme - React Web App Demo" class="md-nav__button md-logo" aria-label="LTA 2nd DevOps Immersion Programme - React Web App Demo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    LTA 2nd DevOps Immersion Programme - React Web App Demo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Creating a Web App with React
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Creating a Web App with React" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Creating a Web App with React
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        1. Setting up the environment
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="." title="1. Setting up the environment" class="md-nav__link md-nav__link--active">
+      1. Setting up the environment
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-codesandbox" class="md-nav__link">
+    1.1 CodeSandbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-material-ui" class="md-nav__link">
+    1.2 Material-UI
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="2_base/" title="2. The Final Product" class="md-nav__link">
+      2. The Final Product
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="3_card/" title="3. Our First Component" class="md-nav__link">
+      3. Our First Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="4_components/" title="4. Adding more Components" class="md-nav__link">
+      4. Adding more Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="5_actions/" title="5. Introducing React Hooks" class="md-nav__link">
+      5. Introducing React Hooks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction to DevOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Introduction to DevOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Introduction to DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="6_devOps/" title="Introduction to DevOps" class="md-nav__link">
+      Introduction to DevOps
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-codesandbox" class="md-nav__link">
+    1.1 CodeSandbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-material-ui" class="md-nav__link">
+    1.2 Material-UI
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="1-setting-up-the-environment">1. Setting up the environment</h1>
+<p>The first step to any React project is to install React and install any project dependencies we might need. </p>
+<h2 id="11-codesandbox">1.1 CodeSandbox</h2>
+<p>We will be creating this project on CodeSandbox. Click on the <strong>Edit on CodeSandbox</strong> button below to create a new repository with the boilerplate code below:</p>
+<p><a href="https://codesandbox.io/s/stoic-darwin-11gnr?fontsize=14&amp;hidenavigation=1&amp;theme=dark"><img alt="Edit LTA DevOps Immersion Programme - React Web App Demo (Starting Code)" src="https://codesandbox.io/static/img/play-codesandbox.svg" /></a></p>
+<iframe src="https://codesandbox.io/embed/stoic-darwin-11gnr?fontsize=14&hidenavigation=1&theme=dark" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="LTA DevOps Immersion Programme - React Web App Demo (Starting Code)" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+
+<div class="admonition error">
+<p class="admonition-title">Save your work</p>
+<p>In order to avoid losing your work, it is recommended that you create a <a href="https://codesandbox.io/signin">CodeSandbox account</a> before moving on. You need a <a href="https://github.com/join">GitHub account</a> to sign up.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Creating a local Repository</p>
+<p>The repository you are forking comes from <code>create-react-app</code>, which is an officially supported way to create single-page React applications. See <a href="https://create-react-app.dev/docs/getting-started">Create-React-App documentation</a>. </p>
+<p>If you wish to use a Desktop Code IDE, you can install <code>create-react-app</code> to your project directory with the following code (replace <code>my-app</code> with the name of your app):</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">npm</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>npm init react-app my-app   
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">yarn</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>yarn create react-app my-app
+</code></pre></div>
+
+</div>
+</div>
+</div>
+<p>Next, examine the project directory under the Files tab on the left. You should see something like the following:</p>
+<p><div class="highlight"><pre><span></span><code>  package.json
+  public/
+    index.html
+  src/
+    App.js
+    index.js
+    styles.css
+</code></pre></div>
+If you create a React project locally on your computer, there will be some additional files.</p>
+<p>For the project to build, these files must exist with <strong>exact</strong> filenames:</p>
+<ul>
+<li><code>public/index.html</code> is the page template;</li>
+<li><code>src/index.js</code> is the JavaScript entry point.
+You can delete or rename the other files.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Some Additional Information</p>
+<p>You may create subdirectories inside src. For faster rebuilds, only files inside src are processed by webpack. You need to put any JS and CSS files inside src, otherwise webpack won’t see them.</p>
+<p>Only files inside public can be used from public/index.html. Read instructions below for using assets from JavaScript and HTML.</p>
+<p>You can, however, create more top-level directories. They will not be included in the production build so you can use them for things like documentation.</p>
+</div>
+<p>Look through each of the files and try to infer what each file does.</p>
+<h2 id="12-material-ui">1.2 Material-UI</h2>
+<p><img alt="Google's Material Design" src="https://images.fastcompany.net/image/upload/w_1280,f_jpg,q_auto,fl_lossy/wp-cms/uploads/2018/05/1-google-announces-the-sequel-to-material-design-material-theming-1.gif" />
+Material-UI contains react components for faster and easier web development. It is a React UI framework inspired by Google's <a href="https://material.io/design">Material Design</a> as illustrated above, and provides a nice user interface for our react app.</p>
+<p>Material-UI is available as an <code>npm</code> package. See <a href="https://material-ui.com/getting-started/installation/">instructions to install</a> to install Material-UI on your local project directory. On CodeSandbox, you can add Material-UI as a dependency by expanding the dependency blade, click add dependency and search/install the following packages:
++ 'material-ui/core'
++ 'material-ui/icons'</p>
+<p>When completed, move on to the next step where we set up the foundation of the app.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="2_base/" title="2. The Final Product" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2. The Final Product
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

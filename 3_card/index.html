@@ -1,0 +1,707 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.5">
+    
+    
+      
+        <title>3. Our First Component - LTA 2nd DevOps Immersion Programme - React Web App Demo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.63b94e9e.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7f672a1f.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-our-first-component" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="LTA 2nd DevOps Immersion Programme - React Web App Demo" class="md-header-nav__button md-logo" aria-label="LTA 2nd DevOps Immersion Programme - React Web App Demo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            LTA 2nd DevOps Immersion Programme - React Web App Demo
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              3. Our First Component
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LTA 2nd DevOps Immersion Programme - React Web App Demo" class="md-nav__button md-logo" aria-label="LTA 2nd DevOps Immersion Programme - React Web App Demo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    LTA 2nd DevOps Immersion Programme - React Web App Demo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Creating a Web App with React
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Creating a Web App with React" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Creating a Web App with React
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="1. Setting up the environment" class="md-nav__link">
+      1. Setting up the environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2_base/" title="2. The Final Product" class="md-nav__link">
+      2. The Final Product
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3. Our First Component
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="3. Our First Component" class="md-nav__link md-nav__link--active">
+      3. Our First Component
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-html-configuration" class="md-nav__link">
+    3.1 HTML Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-appjs" class="md-nav__link">
+    3.2 App.js
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-rendering-a-card" class="md-nav__link">
+    3.3 Rendering a Card
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-final-result" class="md-nav__link">
+    3.4 Final Result
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4_components/" title="4. Adding more Components" class="md-nav__link">
+      4. Adding more Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5_actions/" title="5. Introducing React Hooks" class="md-nav__link">
+      5. Introducing React Hooks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction to DevOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Introduction to DevOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Introduction to DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6_devOps/" title="Introduction to DevOps" class="md-nav__link">
+      Introduction to DevOps
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-html-configuration" class="md-nav__link">
+    3.1 HTML Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-appjs" class="md-nav__link">
+    3.2 App.js
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-rendering-a-card" class="md-nav__link">
+    3.3 Rendering a Card
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-final-result" class="md-nav__link">
+    3.4 Final Result
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="3-our-first-component">3. Our First Component</h1>
+<p>The first component we will develop is the Card.</p>
+<p>Cards are surfaces that display content and actions on a single topic.</p>
+<p>They should be easy to scan for relevant and actionable information. Elements, like text and images, should be placed on them in a way that clearly indicates hierarchy.</p>
+<p>In this project, we use the <code>Card</code> component as a surface for all our other components. For more information on the <code>Card</code> component, see <a href="https://material-ui.com/components/cards/">https://material-ui.com/components/cards/</a>.</p>
+<h2 id="31-html-configuration">3.1 HTML Configuration</h2>
+<p>Before we start creating any React components, adding the following code in the <code>index.html</code> file between the <code>header</code> and <code>body</code> tags:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="nt">html</span><span class="o">,</span>
+    <span class="nt">body</span><span class="o">,</span>
+    <span class="p">#</span><span class="nn">root</span><span class="o">,</span>
+    <span class="p">#</span><span class="nn">root</span> <span class="o">&gt;</span> <span class="nt">div</span> <span class="p">{</span>
+      <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+      <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>This code block removes all the margins in the React App (defaults to 8px) and stretches the App to fill 100% of the browser height.</p>
+<p>Next, like HTML, we also create a separate <code>.css</code> file to store our CSS styles for our React components. Create a file <code>App.css</code> in the same directory as <code>App.js</code> and import it before the function <code>App</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="s2">&quot;./App.css&quot;</span>
+</code></pre></div>
+
+<h2 id="32-appjs">3.2 <code>App.js</code></h2>
+<p>Navigate to the <code>App.js</code> file in the Files directory. Note that you should see "Edit src/App.js and save to reload." in the Browser. Also note the boilerplate code already included:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&quot;./styles.css&quot;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;App&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">CodeSandbox</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Start</span> <span class="nx">editing</span> <span class="nx">to</span> <span class="nx">see</span> <span class="nx">some</span> <span class="nx">magic</span> <span class="nx">happen</span><span class="o">!&lt;</span><span class="err">/h2&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>There are two parts to the code:</p>
+<ul>
+<li><strong>Importing components</strong>: React is imported into the JavaScript file. This is necessary to distinguish it from non-React JS files. Other CSS and image files are also imported.</li>
+<li><strong>App Function</strong>: Contains JSX code, which allows us to write HTML in React in order to produce React elements. It is neither HTML nor JS.  You can read more about JSX <a href="https://reactjs.org/docs/introducing-jsx.html">here</a>. We also set this function as the default export for <code>App.js</code>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Where is the function <code>App</code> consumed?</p>
+<p>This App function is imported in <code>index.js</code>, where it is rendered to the React DOM here at the 'root' HTML DOM node. </p>
+<div class="highlight"><pre><span></span><code><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+<span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="err">/React.StrictMode&gt;,</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+
+<p>Read more about rendering React elements to the DOM <a href="https://reactjs.org/docs/rendering-elements.html">here</a>.</p>
+</div>
+<h2 id="33-rendering-a-card">3.3 Rendering a Card</h2>
+<p>First, delete everything within the <code>div</code> tag.</p>
+<div class="highlight"><pre><span></span><code>import React from &#39;react&#39;;
+import logo from &#39;./logo.svg&#39;;
+import &#39;./App.css&#39;;
+
+function App() {
+    return (
+      &lt;div className=&quot;App&quot;&gt;
+      &lt;/div&gt;
+    );
+  }
+export default App;
+</code></pre></div>
+
+<div class="admonition question">
+<p class="admonition-title">What is <code>className</code>?</p>
+<p><code>className</code> is a prop used in React for adding CSS classes to React components. You can define  your styles in a separate <code>*.css</code> file as usual and refer to them using <code>className</code>.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">What are React props?</p>
+<p>Props are arguments passed into React components. React Props are like function arguments in JavaScript and attributes in HTML.</p>
+<p>To send props into a component, use the <a href="https://www.w3schools.com/react/react_props.asp">same syntax</a> as HTML attributes:</p>
+</div>
+<p>Next, add the following CSS styles to <code>App.css</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">App</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+  <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+  <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#80cbc4</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Next, refer to the <a href="https://material-ui.com/components/cards/">Material-UI documentation</a> on the <code>Card</code> component. Study the sample code for a <strong>Simple Card</strong>.</p>
+<p><div class="highlight"><pre><span></span><code>import React from &#39;react&#39;;
+import { makeStyles } from &#39;@material-ui/core/styles&#39;;
+import Card from &#39;@material-ui/core/Card&#39;;
+import CardActions from &#39;@material-ui/core/CardActions&#39;;
+import CardContent from &#39;@material-ui/core/CardContent&#39;;
+import Button from &#39;@material-ui/core/Button&#39;;
+import Typography from &#39;@material-ui/core/Typography&#39;;
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+  },
+  bullet: {
+    display: &#39;inline-block&#39;,
+    margin: &#39;0 2px&#39;,
+    transform: &#39;scale(0.8)&#39;,
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+});
+
+export default function SimpleCard() {
+  const classes = useStyles();
+  const bull = &lt;span className={classes.bullet}&gt;•&lt;/span&gt;;
+
+  return (
+    &lt;Card className={classes.root}&gt;
+      &lt;CardContent&gt;
+        &lt;Typography className={classes.title} color=&quot;textSecondary&quot; gutterBottom&gt;
+          Word of the Day
+        &lt;/Typography&gt;
+        &lt;Typography variant=&quot;h5&quot; component=&quot;h2&quot;&gt;
+          be{bull}nev{bull}o{bull}lent
+        &lt;/Typography&gt;
+        &lt;Typography className={classes.pos} color=&quot;textSecondary&quot;&gt;
+          adjective
+        &lt;/Typography&gt;
+        &lt;Typography variant=&quot;body2&quot; component=&quot;p&quot;&gt;
+          well meaning and kindly.
+          &lt;br /&gt;
+          {&#39;&quot;a benevolent smile&quot;&#39;}
+        &lt;/Typography&gt;
+      &lt;/CardContent&gt;
+      &lt;CardActions&gt;
+        &lt;Button size=&quot;small&quot;&gt;Learn More&lt;/Button&gt;
+      &lt;/CardActions&gt;
+    &lt;/Card&gt;
+  );
+}
+</code></pre></div>
+Now we only need the Card surface and not the content. We can simplify the code as follows:
+<div class="highlight"><pre><span></span><code>&lt;Card&gt;
+    &lt;CardContent&gt;
+    &lt;/CardContent&gt;
+    &lt;CardActions&gt;
+    &lt;/CardActions&gt;
+&lt;/Card&gt;
+</code></pre></div></p>
+<p>Now this to <code>App.js</code> within the <code>div</code> tag.
+<div class="highlight"><pre><span></span><code>import React from &quot;react&quot;;
+import &quot;./App.css&quot;;
+import { Card } from &quot;@material-ui/core&quot;;
+
+function App() {
+  return (
+    &lt;div className=&quot;App&quot;&gt;
+      &lt;Card className=&quot;card&quot;&gt;
+        &lt;CardContent /&gt;
+        &lt;CardActions /&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;
+</code></pre></div>
+You will notice errors popping up immediately, stating that React components like <code>Card</code> are missing. To fix this, add the necesary imports to the top, below the first line (where React is imported):</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">Card</span><span class="p">,</span> <span class="nx">CardContent</span><span class="p">,</span> <span class="nx">CardActions</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@material-ui/core&quot;</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Finally, add the following styles to <code>App.css</code>. This will center the component vertically and horizontally, and change the background color.</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span>
+<span class="p">}</span>
+</code></pre></div>
+To apply these CSS styles on the <code>Card</code> component, add a <code>className</code> prop it referencing <code>.card</code>:
+<div class="highlight"><pre><span></span><code>&lt;Card className=&quot;card&quot;&gt;
+</code></pre></div></p>
+<h2 id="34-final-result">3.4 Final Result</h2>
+<p>Your final code and App should look like this:
+<div class="highlight"><pre><span></span><code>import React from &quot;react&quot;;
+import &quot;./App.css&quot;;
+import { Card, CardContent, CardActions } from &quot;@material-ui/core&quot;;
+
+function App() {
+  return (
+    &lt;div className=&quot;App&quot;&gt;
+      &lt;Card className=&quot;card&quot;&gt;
+        &lt;CardContent /&gt;
+        &lt;CardActions /&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;
+</code></pre></div>
+<img alt="3_progress" src="../img/3_progress.JPG" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../2_base/" title="2. The Final Product" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                2. The Final Product
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../4_components/" title="4. Adding more Components" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                4. Adding more Components
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
