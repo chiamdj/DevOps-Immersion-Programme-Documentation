@@ -295,4 +295,6 @@ Test out your app. Does it work like the one below?
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
 
+To build your app, run `npm run build` or `yarn build`. It will build the react files into static HTML, CSS and JSS files that can be hosted on an on-premises server or in the cloud. 
+
 Have any comments or feedback? Contact [me](mailto:chiam_da_jian@lta.gov.sg)!
